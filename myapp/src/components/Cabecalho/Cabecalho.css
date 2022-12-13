@@ -1,0 +1,56 @@
+.titulo1{
+  font-family: "Rubik";
+  font-size: 40px;
+  color:#9456B3;
+ 
+}
+.Circulo1{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 50px;
+  margin-top: 7px;
+}
+
+.Circulo1:hover {
+  transition: 2s;
+  transform: rotateY(360deg);
+  
+}
+
+.Aro1{
+  width: 50px;
+  height: 50px;
+  margin-top: 7px;
+}
+
+.BtnC{
+  position: relative;
+  left: 50%;
+  color: #9456B3;
+}
+.nav {
+  
+  background-color: #9456B3;
+  display: inline-block;
+
+}
+
+.nav a{
+  position: relative;
+  left: 50%;
+  display: inline;
+  margin-left: 50px;
+  text-decoration: none;
+  padding: 1rem;
+  color: #f8720b;
+  font-weight: bold;
+ font-family: 'Rubik';
+ text-transform: capitalize;
+
+  
+}
+
+.nav a:hover{
+color: white;
+}

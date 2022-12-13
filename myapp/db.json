@@ -1,0 +1,63 @@
+{
+  "cadastro": [
+    {
+      "nome": "Ana2",
+      "telefone": "78887878",
+      "email": "ana@mail.com",
+      "empreendedor": "sim",
+      "empreendimento": "Professora particular",
+      "id": 2
+    },
+    {
+      "nome": "Alejandra Delgado",
+      "telefone": "(81)992856733",
+      "email": "globodanzante@gmail.com",
+      "empreendedor": "sim",
+      "empreendimento": "vendo gas",
+      "id": 3
+    },
+    {
+      "nome": "Henry Luna",
+      "telefone": "81 992856733",
+      "email": "lunaretornado2@gmail.com",
+      "empreendedor": "",
+      "empreendimento": "hyehejhdhkdjdsjkdjkdfjkfdjkfdjkfdjkjkjkfjkfdjkdfjkfdjkfdjkdfjkdfjkdfjdfklfklklfgklklfdklfdfgkl",
+      "id": 4
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Traduções na Hora",
+      "descricao": "Traduções de qualquer tipo de documento",
+      "preco": "a combinar",
+      "categoria": "servicos",
+      "empreendedor": "Maria",
+      "contato": 24514566,
+      "id": 1
+    },
+    {
+      "nome": "Traduções na Hora",
+      "descricao": "Traduções de qualquer tipo de documento",
+      "preco": "a combinar",
+      "categoria": "servicos",
+      "empreendedor": "Maria",
+      "contato": 24514566,
+      "id": 2
+    },
+    {
+      "nome": "Traduções na Hora",
+      "descricao": "Traduções de qualquer tipo de documento",
+      "preco": "a combinar",
+      "categoria": "servicos",
+      "empreendedor": "Maria",
+      "contato": 24514566,
+      "id": 3
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "jazmin",
+      "senha": "abc1234"
+    }
+  ]
+}
