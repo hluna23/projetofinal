@@ -1,10 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row, Form } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
-import "./ValidarForm";
+import FormCheckInput from "react-bootstrap/esm/FormCheckInput";
+import InputGroup from "react-bootstrap/InputGroup";
 
 export default function CadastroUsuario() {
+  const [validated, setValidated] = useState(false);
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
@@ -27,14 +29,25 @@ export default function CadastroUsuario() {
     });
   };
 
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
   return (
     <div>
       <Cabecalho />
-      <br />
       <div>
-        <form>
+        <br />
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <span>Você é empreendedor?</span>
           <div>
+            <br />
             <input
               type="radio"
               id="empreendedor"
@@ -52,65 +65,69 @@ export default function CadastroUsuario() {
             />
             <label htmlFor="nao">Ainda não</label>
           </div>
-          <div>
-            <span>Nome: </span>
-            <label>
-              <input
+          <br />
+
+          <Row className="mb-3">
+            <Form.Group as={Col} md="4" controlId="nome">
+              <Form.Label>Nome e Sobrenome</Form.Label>
+              <Form.Control
+                required
                 type="text"
-                placeholder="Nome Sobrenome"
+                placeholder="Nome e Sobrenome"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
               />
-            </label>
-          </div>
-          <div>
-            <span>Telefone: </span>
-            <label>
-              <input
+              <Form.Control.Feedback>Perfeito!</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group as={Col} md="4" id="telefone">
+              <label>Telefone: </label>
+              <Form.Control
+                required
                 type="text"
                 placeholder="(xx) xxxxx-xxxx"
                 value={telefone}
                 onChange={(e) => setTelefone(e.target.value)}
               />
-            </label>
-          </div>
-          <div>
-            <span id="span-email">E-mail: </span>
-            <label>
-              <input
-                type="email"
-                name="email"
-                placeholder="email@example.com"
+              <Form.Control.Feedback>Ótimo!</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group as={Col} md="4" id="email">
+              <label>E-mail: </label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="email@exemplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-            </label>
-          </div>
-          <div>
-            <label>
-              <span for="empreendimento">Descreva seu empreendimento: </span>
-              <br />
-              <textarea
-                id="empreendimento"
-                name="empreendimento"
-                rows="5"
-                cols="33"
-                placeholder="Descreva seu empreendimento detalhadamente"
+              <Form.Control.Feedback>Perfeito!!</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group as={Col} md="4" id="empreendimento">
+              <label htmlFor="empreendimento">Empreendimento</label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="Descreva aqui detalhadamente seu empreendimento"
                 value={empreendimento}
                 onChange={(e) => setEmpreendimento(e.target.value)}
-              ></textarea>
-            </label>
-          </div>
-        </form>
-        <Link to="/cadastrar">
-          <Button
-            variant="success"
-            onClick={novoCadastro}
-            className="botao-cadastro"
-          >
-            Cadastrar
-          </Button>
-        </Link>
+              />
+              <Form.Control.Feedback>Muito bem!</Form.Control.Feedback>
+            </Form.Group>
+          </Row>
+
+          <Link to="/cadastrar">
+            <Button
+              type="submit"
+              variant="success"
+              onClick={novoCadastro}
+              className="botao-cadastro"
+            >
+              Cadastrar
+            </Button>
+          </Link>
+        </Form>
       </div>
     </div>
   );

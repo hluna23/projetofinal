@@ -7,7 +7,7 @@ import "./Produtos.css";
 export default function Produtos() {
   const [produtos, setProdutos] = useState([]);
   const [id, setId] = useState("");
-  const [nome, setNome] = useState("");
+  const [nomeProduto, setNomeProduto] = useState("");
   const [descricao, setDescricao] = useState("");
   const [preco, setPreco] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -25,7 +25,7 @@ export default function Produtos() {
   const fecharModalEdit = () => setEdit(false);
   const mostrarModalEdit = (
     id,
-    nome,
+    nomeProduto,
     descricao,
     preco,
     categoria,
@@ -33,7 +33,7 @@ export default function Produtos() {
     contato
   ) => {
     setId(id);
-    setNome(nome);
+    setNomeProduto(nomeProduto);
     setDescricao(descricao);
     setPreco(preco);
     setCategoria(categoria);
@@ -54,7 +54,7 @@ export default function Produtos() {
 
   const alterarProduto = async () => {
     const cadastroPatch = {
-      nome,
+      nomeProduto,
       descricao,
       preco,
       categoria,
@@ -96,7 +96,7 @@ export default function Produtos() {
               <div id="Loja">
                 <img src={Loja} alt="Loja" className="loja" />
                 <ul>
-                  <li> {produto.nome}</li>
+                  <li> {produto.nomeProduto}</li>
                   <li> {produto.descricao}</li>
                   <li>Preco: {produto.preco}</li>
                   <li>Categoria: {produto.categoria}</li>
@@ -110,7 +110,7 @@ export default function Produtos() {
                     onClick={() =>
                       mostrarModalEdit(
                         produto.id,
-                        produto.nome,
+                        produto.nomeProduto,
                         produto.descricao,
                         produto.preco,
                         produto.categoria,
@@ -145,12 +145,12 @@ export default function Produtos() {
         <Modal.Body>
           <form>
             <div>
-              <span>Nome: </span>
+              <span>Nome do Produto: </span>
               <label>
                 <input
                   type="text"
-                  defaultValue={nome}
-                  onChange={(e) => setNome(e.target.value)}
+                  defaultValue={nomeProduto}
+                  onChange={(e) => setNomeProduto(e.target.value)}
                 />
               </label>
             </div>
