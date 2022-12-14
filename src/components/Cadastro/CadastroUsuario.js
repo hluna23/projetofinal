@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { isRouteErrorResponse, Link } from "react-router-dom";
 import { Button, Col, Row, Form } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
-import FormCheckInput from "react-bootstrap/esm/FormCheckInput";
-import InputGroup from "react-bootstrap/InputGroup";
 
 export default function CadastroUsuario() {
   const [validated, setValidated] = useState(false);
@@ -12,6 +10,7 @@ export default function CadastroUsuario() {
   const [email, setEmail] = useState("");
   const [empreendimento, setEmpreendimento] = useState("");
   const [empreendedor, setEmpreendedor] = useState("");
+  const [errors, setErrors] = useState('')
 
   const novoCadastro = async () => {
     const cadastroPost = {
@@ -43,8 +42,8 @@ export default function CadastroUsuario() {
     <div>
       <Cabecalho />
       <div>
-        <br />
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form noValidate onSubmit={handleSubmit}>
+        <Row className="mb-3">
           <span>Você é empreendedor?</span>
           <div>
             <br />
@@ -66,54 +65,58 @@ export default function CadastroUsuario() {
             <label htmlFor="nao">Ainda não</label>
           </div>
           <br />
-
-          <Row className="mb-3">
-            <Form.Group as={Col} md="4" controlId="nome">
-              <Form.Label>Nome e Sobrenome</Form.Label>
+            <Form.Group as={Col} md="4" controlId="nome" className='position-relative'>
+              <Form.Label>Nome e Sobrenome:</Form.Label>
               <Form.Control
                 required
                 type="text"
                 placeholder="Nome e Sobrenome"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
+                isValid={nome && !errors.nome}
               />
-              <Form.Control.Feedback>Perfeito!</Form.Control.Feedback>
+              <Form.Control.Feedback tooltip>Perfeito!</Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group as={Col} md="4" id="telefone">
-              <label>Telefone: </label>
+            <Form.Group as={Col} md="4" controlId="telefone" className='position-relative'>
+              <Form.Label>Telefone: </Form.Label>
               <Form.Control
                 required
                 type="text"
                 placeholder="(xx) xxxxx-xxxx"
                 value={telefone}
                 onChange={(e) => setTelefone(e.target.value)}
+                isValid={telefone && !errors.telefone}
               />
-              <Form.Control.Feedback>Ótimo!</Form.Control.Feedback>
+              <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group as={Col} md="4" id="email">
-              <label>E-mail: </label>
+            <Form.Group as={Col} md="4" controlId="email" className='position-relative'>
+              <Form.Label>E-mail: </Form.Label>
               <Form.Control
                 required
                 type="text"
                 placeholder="email@exemplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                isValid={email && !errors.email}
+
               />
-              <Form.Control.Feedback>Perfeito!!</Form.Control.Feedback>
+              <Form.Control.Feedback tooltip>Perfeito!!</Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group as={Col} md="4" id="empreendimento">
-              <label htmlFor="empreendimento">Empreendimento</label>
+            <Form.Group as={Col} md="4" controlId="empreendimento" className='position-relative'>
+              <Form.Label>Empreendimento</Form.Label>
               <Form.Control
                 required
                 type="text"
                 placeholder="Descreva aqui detalhadamente seu empreendimento"
                 value={empreendimento}
                 onChange={(e) => setEmpreendimento(e.target.value)}
+                isValid={empreendimento && !errors.empreendimento}
+
               />
-              <Form.Control.Feedback>Muito bem!</Form.Control.Feedback>
+              <Form.Control.Feedback tooltip>Muito bem!</Form.Control.Feedback>
             </Form.Group>
           </Row>
 
