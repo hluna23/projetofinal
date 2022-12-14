@@ -58,6 +58,15 @@
       "empreendedor": "Maria",
       "contato": 24514566,
       "id": 1
+    },
+    {
+      "nomeProduto": "Motorola",
+      "descricao": "celular tactil",
+      "preco": "R$2.000",
+      "categoria": "movil",
+      "nomeEmpreendedor": "Jazmin",
+      "contato": "54879632145",
+      "id": 2
     }
   ],
   "usuarios": [

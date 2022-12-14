@@ -13,7 +13,7 @@ export default function Cabecalho() {
       <img src={circulo} alt="logo" className="Circulo1"/>
           <img src={aro} alt="logo" className="Aro1"/>
         <Link to="/produtos" activeClassName="active">
-          <p>productos</p>
+          <p>produtos</p>
         </Link>
         <Link to="/cadastrar" className="linkC">
           <p>cadastro</p>

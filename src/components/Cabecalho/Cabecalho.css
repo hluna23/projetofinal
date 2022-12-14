@@ -1,10 +1,9 @@
-.titulo1{
+.titulo1 {
   font-family: "Rubik";
   font-size: 40px;
-  color:#9456B3;
- 
+  color: #9456b3;
 }
-.Circulo1{
+.Circulo1 {
   width: 50px;
   height: 50px;
   position: relative;
@@ -15,28 +14,25 @@
 .Circulo1:hover {
   transition: 2s;
   transform: rotateY(360deg);
-  
 }
 
-.Aro1{
+.Aro1 {
   width: 50px;
   height: 50px;
   margin-top: 7px;
 }
 
-.BtnC{
+.BtnC {
   position: relative;
   left: 50%;
-  color: #9456B3;
+  color: #9456b3;
 }
 .nav {
-  
-  background-color: #9456B3;
+  background-color: #9456b3;
   display: inline-block;
-
 }
 
-.nav a{
+.nav a {
   position: relative;
   left: 50%;
   display: inline;
@@ -45,12 +41,10 @@
   padding: 1rem;
   color: #f8720b;
   font-weight: bold;
- font-family: 'Rubik';
- text-transform: capitalize;
-
-  
+  font-family: "Rubik";
+  text-transform: capitalize;
 }
 
-.nav a:hover{
-color: white;
+.nav a:hover {
+  color: white;
 }
