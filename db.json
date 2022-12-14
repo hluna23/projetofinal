@@ -47,30 +47,6 @@
       "empreendedor": "sim",
       "empreendimento": "venta de carros y motos",
       "id": 12
-    },
-    {
-      "nome": "alk",
-      "telefone": "5478962",
-      "email": "alk@hotmail",
-      "empreendedor": "nao",
-      "empreendimento": "askdjbaekjdbafhorfhaleui",
-      "id": 13
-    },
-    {
-      "nome": "",
-      "telefone": "",
-      "email": "",
-      "empreendedor": "",
-      "empreendimento": "",
-      "id": 14
-    },
-    {
-      "nome": "",
-      "telefone": "",
-      "email": "",
-      "empreendedor": "",
-      "empreendimento": "",
-      "id": 15
     }
   ],
   "produtos": [
@@ -93,7 +69,7 @@
       "contato": "548796555555",
       "id": 2,
       "nome": "Catalina",
-      "empreendedor": "Maria catalina"
+      "empreendedor": "Maria "
     },
     {
       "nomeProduto": "Automoveis",
@@ -104,15 +80,6 @@
       "contato": "56987412365",
       "id": 3,
       "empreendedor": "Carolina"
-    },
-    {
-      "nomeProduto": "",
-      "descricao": "",
-      "preco": "",
-      "categoria": "",
-      "nomeEmpreendedor": "",
-      "contato": "",
-      "id": 4
     }
   ],
   "usuarios": [
