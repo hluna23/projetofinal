@@ -120,7 +120,7 @@ export default function CadastroUsuario() {
             </Form.Group>
           </Row>
 
-          <Link to="/cadastrar">
+          <Link to="/cadastro-produto">
             <Button
               type="submit"
               variant="success"
