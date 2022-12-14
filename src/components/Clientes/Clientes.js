@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Col, Modal } from "react-bootstrap";
+import { Form } from "react-router-dom";
 import Cabecalho from "../Cabecalho/Cabecalho";
 import "./Clientes.css"
 
@@ -13,6 +14,10 @@ export default function Clientes() {
   const [telefone, setTelefone] = useState("");
   const [empreendedor, setEmpreendedor] = useState("");
   const [empreendimento, setEmpreendimento] = useState("");
+
+  const [validated, setValidated] = useState(false);
+  const [errors, setErrors] = useState("");
+
 
   const [show, setShow] = useState(false);
   const fecharModal = () => setShow(false);
@@ -136,7 +141,9 @@ export default function Clientes() {
                   type="text"
                   defaultValue={nome}
                   onChange={(e) => setNome(e.target.value)}
+              isValid={nome && !errors.nome}
                 />
+              <span tooltip>Agora sim?</span>
               </label>
             </div>
             <div>
@@ -145,7 +152,9 @@ export default function Clientes() {
                   type="text"
                   defaultValue={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  isValid={email && !errors.email}
                 />
+              <span tooltip>Aqui tambem?</span>
               </label>
             </div>
             <div>
@@ -154,7 +163,9 @@ export default function Clientes() {
                   type="text"
                   defaultValue={telefone}
                   onChange={(e) => setTelefone(e.target.value)}
-                />
+                  isValid={telefone && !errors.telefone}
+                  />
+                <span tooltip>Trocou foi?</span>
               </label>
             </div>
             <div> 
@@ -163,7 +174,9 @@ export default function Clientes() {
                   type="text"
                   defaultValue={empreendedor}
                   onChange={(e) => setEmpreendedor(e.target.value)}
-                />
+                  isValid={empreendedor && !errors.empreendedor}
+                  />
+                <span tooltip>Arrasou!!!</span>
               </label>
             </div>
             <div>
@@ -172,7 +185,9 @@ export default function Clientes() {
                   type="text"
                   defaultValue={empreendimento}
                   onChange={(e) => setEmpreendimento(e.target.value)}
-                />
+                  isValid={empreendimento && !errors.empreendimento}
+                  />
+                <span tooltip>Interessante né?</span>
               </label>
             </div>
           </form>
