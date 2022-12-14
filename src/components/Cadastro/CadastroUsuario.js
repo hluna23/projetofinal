@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
+import "./ValidarForm";
 
-export default function Criar() {
+export default function CadastroUsuario() {
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +20,6 @@ export default function Criar() {
       empreendimento,
     };
 
-    //crear cadastro
     await fetch("http://localhost:3004/cadastro", {
       method: "POST",
       body: JSON.stringify(cadastroPost),
@@ -30,6 +30,7 @@ export default function Criar() {
   return (
     <div>
       <Cabecalho />
+      <br />
       <div>
         <form>
           <span>Você é empreendedor?</span>
@@ -74,10 +75,11 @@ export default function Criar() {
             </label>
           </div>
           <div>
-            <span>E-mail: </span>
+            <span id="span-email">E-mail: </span>
             <label>
               <input
-                type="text"
+                type="email"
+                name="email"
                 placeholder="email@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -85,19 +87,23 @@ export default function Criar() {
             </label>
           </div>
           <div>
-            <span>Descreva seu empreendimento: </span>
             <label>
-              <input
-                type="text"
+              <span for="empreendimento">Descreva seu empreendimento: </span>
+              <br />
+              <textarea
+                id="empreendimento"
+                name="empreendimento"
+                rows="5"
+                cols="33"
                 placeholder="Descreva seu empreendimento detalhadamente"
                 value={empreendimento}
                 onChange={(e) => setEmpreendimento(e.target.value)}
-              />
+              ></textarea>
             </label>
           </div>
         </form>
-        <Link to="/">
-          <Button style={{color: "blue"}}
+        <Link to="/cadastrar">
+          <Button
             variant="success"
             onClick={novoCadastro}
             className="botao-cadastro"

@@ -21,14 +21,14 @@ export default function Produtos() {
           return(
             <div id="Loja">
               <img src={Loja} alt="Loja" className="loja"/>
-              <div key={produto.id}>
-                <p> {produto.nome}</p>
-                <p> {produto.descricao}</p>
-                <p>Preco: {produto.preco}</p>
-                <p>Categoria: {produto.categoria}</p>
-                <p>Empreendedor: {produto.empreendedor}</p>
-                <p>Contato: {produto.contato}</p>
-              </div>
+              <ul key={produto.id}>
+                <li> {produto.nome}</li>
+                <li> {produto.descricao}</li>
+                <li>Preco: {produto.preco}</li>
+                <li>Categoria: {produto.categoria}</li>
+                <li>Empreendedor: {produto.empreendedor}</li>
+                <li>Contato: {produto.contato}</li>
+              </ul>
             </div>
             
           )

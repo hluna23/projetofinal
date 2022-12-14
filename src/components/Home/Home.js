@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import circulo from "../img/circulo.png";
 import aro from "../img/aro.png";
 import "./Home.css"

@@ -1,0 +1,69 @@
+{
+  "cadastro": [
+    {
+      "nome": "Ana2",
+      "telefone": "78887878",
+      "email": "ana@mail.com",
+      "empreendedor": "sim",
+      "empreendimento": "Professora particular",
+      "id": 2
+    },
+    {
+      "nome": "Jazmin",
+      "telefone": "89564123658",
+      "email": "jazmin@mail.com",
+      "empreendedor": "nao",
+      "empreendimento": "delivery de cachapas",
+      "id": 3
+    },
+    {
+      "nome": "Juanita alvez",
+      "telefone": "00254789652",
+      "email": "juana@mail.com",
+      "empreendedor": "nao",
+      "empreendimento": "produtos eletricos",
+      "id": 5
+    },
+    {
+      "nome": "ana",
+      "telefone": "46545",
+      "email": "jazminpinto61@gmail.com",
+      "empreendedor": "nao",
+      "empreendimento": "coghjffsdth",
+      "id": 7
+    },
+    {
+      "nome": "Ana carolina",
+      "telefone": "5486843548",
+      "email": "carolina@gmcol",
+      "empreendedor": "",
+      "empreendimento": "nosso emprendimento e sobre maquiagem deixar as garotas mais lindas do q ja sao",
+      "id": 8
+    },
+    {
+      "nome": "Jesika",
+      "telefone": "5469874235",
+      "email": "jesika@mail.com",
+      "empreendedor": "nao",
+      "empreendimento": "askdnadheiofnaklfnhodiafha",
+      "id": 9
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Servicos de tradução",
+      "descricao": "Traduções de qualquer tipo de documento",
+      "preco": "a combinar",
+      "categoria": "servicos",
+      "empreendedor": "Maria",
+      "contato": 24514566,
+      "id": 1
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "jazmin",
+      "senha": "abc1234"
+    }
+  ]
+}
