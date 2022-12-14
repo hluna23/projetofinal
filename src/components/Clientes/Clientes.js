@@ -113,9 +113,7 @@ export default function Clientes() {
                 }
                 className="botoes-lista"
               >
-                Editar{" "}
-              </Button>
-              <br />
+                Editar</Button>
               <Button
                 variant="outline-danger"
                 size="sm"
@@ -147,7 +145,7 @@ export default function Clientes() {
               </label>
             </div>
             <div>
-              <label>Email:
+              <label>E-mail:
                 <input className="input"
                   type="text"
                   defaultValue={email}

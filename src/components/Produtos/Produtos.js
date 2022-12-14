@@ -14,6 +14,9 @@ export default function Produtos() {
   const [empreendedor, setEmpreendedor] = useState("");
   const [contato, setContato] = useState("");
 
+  const [validated, setValidated] = useState(false);
+  const [errors, setErrors] = useState("");
+
   const [show, setShow] = useState(false);
   const fecharModal = () => setShow(false);
   const mostrarModal = (key) => {
@@ -67,7 +70,6 @@ export default function Produtos() {
       body: JSON.stringify(cadastroPatch),
       headers: { "Content-type": "application/json; charset=UTF-8" },
     });
-
     atualizarProduto();
     fecharModalEdit();
   };
@@ -120,8 +122,7 @@ export default function Produtos() {
                     }
                     className="botoes-lista"
                   >
-                    {" "}
-                    Editar{""}
+                    Editar
                   </Button>
                   <Button
                     variant="outline-danger"
@@ -151,7 +152,9 @@ export default function Produtos() {
                   type="text"
                   defaultValue={nomeProduto}
                   onChange={(e) => setNomeProduto(e.target.value)}
+                  isValid={nomeProduto && !errors.nomeProduto}
                 />
+                <span tooltip>Agora sim?</span>
               </label>
             </div>
             <div>
@@ -161,7 +164,9 @@ export default function Produtos() {
                   type="text"
                   defaultValue={descricao}
                   onChange={(e) => setDescricao(e.target.value)}
+                  isValid={descricao && !errors.descricao}
                 />
+                <span tooltip>Aqui tambem?</span>
               </label>
             </div>
             <div>
@@ -171,7 +176,9 @@ export default function Produtos() {
                   type="text"
                   defaultValue={preco}
                   onChange={(e) => setPreco(e.target.value)}
+                  isValid={preco && !errors.preco}
                 />
+                <span tooltip>Trocou foi?</span>
               </label>
             </div>
             <div>
@@ -181,7 +188,9 @@ export default function Produtos() {
                   type="text"
                   defaultValue={categoria}
                   onChange={(e) => setCategoria(e.target.value)}
+                  isValid={categoria && !errors.categoria}
                 />
+                <span tooltip>Arrasou!!!</span>
               </label>
             </div>
             <div>
@@ -191,7 +200,9 @@ export default function Produtos() {
                   type="text"
                   defaultValue={empreendedor}
                   onChange={(e) => setEmpreendedor(e.target.value)}
+                  isValid={empreendedor && !errors.empreendedor}
                 />
+                <span tooltip>Arrasou!!!</span>
               </label>
             </div>
             <div>
@@ -201,7 +212,9 @@ export default function Produtos() {
                   type="text"
                   defaultValue={contato}
                   onChange={(e) => setContato(e.target.value)}
+                  isValid={contato && !errors.contato}
                 />
+                <span tooltip>Arrasou!!!</span>
               </label>
             </div>
           </form>
@@ -222,7 +235,7 @@ export default function Produtos() {
         </Modal.Header>
         <Modal.Body>
           Tem certeza?
-          <br /> Se apaga o produto não vai poder recuperar essa informação!!!.
+          <br /> Ao confirmar, o produto selecionado não vai se poder recuperar!!!.
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={fecharModal}>

@@ -57,7 +57,8 @@
       "categoria": "servicos",
       "empreendedor": "Maria",
       "contato": 24514566,
-      "id": 1
+      "id": 1,
+      "nomeProduto": "Telcel"
     },
     {
       "nomeProduto": "Motorola",
@@ -77,7 +78,8 @@
       "categoria": "ventas",
       "nomeEmpreendedor": "Ana Paula",
       "contato": "56987412365",
-      "id": 3
+      "id": 3,
+      "empreendedor": "Carolina"
     }
   ],
   "usuarios": [
