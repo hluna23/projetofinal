@@ -85,45 +85,47 @@ export default function Clientes() {
   return (
     <div>
       <Cabecalho />
-      <h1>Empreendedores cadastrados</h1>
+      <h1 className="tituloE">Empreendedores cadastrados</h1>
 
       {cadastro.map((contato) => {
         return (
-          <div key={contato.id}>
-            <ul>
-              <li>Nome: {contato.nome}</li>
-              <li>Email: {contato.email}</li>
-              <li>Telefone: {contato.telefone}</li>
-              <li>Empreendedor: {contato.empreendedor}</li>
-              <li>Descricao do empreendimento: {contato.empreendimento}</li>
-            </ul>
-            <div>
-              <Button
-                variant="outline-success"
-                size="sm"
-                onClick={() =>
-                  mostrarModalEdit(
-                    contato.id,
-                    contato.nome,
-                    contato.email,
-                    contato.telefone,
-                    contato.empreendedor,
-                    contato.empreendimento
-                  )
-                }
-                className="botoes-lista"
-              >
-                Editar</Button>
-              <Button
-                variant="outline-danger"
-                size="sm"
-                onClick={() => mostrarModal(contato.id)}
-                className="botoes-lista"
-              >
-                Apagar
-              </Button>
+          <div  className="FormuCadastro">
+            <div key={contato.id} className="li">
+              <ul>
+                <li>Nome: {contato.nome}</li>
+                <li>Email: {contato.email}</li>
+                <li>Telefone: {contato.telefone}</li>
+                <li>Empreendedor: {contato.empreendedor}</li>
+                <li>Descricao do empreendimento: {contato.empreendimento}</li>
+              </ul>
+              <div>
+                <Button 
+                  variant="outline-success"
+                  size="sm"
+                  onClick={() =>
+                    mostrarModalEdit(
+                      contato.id,
+                      contato.nome,
+                      contato.email,
+                      contato.telefone,
+                      contato.empreendedor,
+                      contato.empreendimento
+                    )
+                  }
+                  className="botoes-lista"
+                >
+                  Editar</Button>
+                <Button
+                  variant="outline-danger"
+                  size="sm"
+                  onClick={() => mostrarModal(contato.id)}
+                  className="botoes-lista"
+                >
+                  Apagar
+                </Button>
+              </div>
             </div>
-          </div>
+          </div>      
         );
       })}
 
@@ -132,7 +134,7 @@ export default function Clientes() {
           <Modal.Title>Editar cadastro</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <form className="FormuCadastro">
+          <form id='editar'>
             <div>              
               <label>Nome:
                 <input className="input"

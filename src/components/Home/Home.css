@@ -20,7 +20,7 @@
 }
 .Circulo{
 position: relative;
-left: 490px;
+left: 470px;
 }
 
 
@@ -59,6 +59,7 @@ left: 490px;
   border:2px solid #9678d2;
   text-align: center;
   padding: 12px;
+  border-radius: 8px;
 }
 
 

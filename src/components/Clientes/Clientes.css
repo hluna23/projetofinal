@@ -1,8 +1,29 @@
 .FormuCadastro {
-  display: block;
+  font-family: "Rubik";
+  margin-left: 50px;
+  margin-top: 25px;
+  background-color: #F1A887;
+  width: 450px
+}
 
+.li{
+ display: inline;
+  margin-left: 50px;
+  margin-top: 25px;
+  
+    ;
 }
 
 .input{
   display: flex;
+}
+
+.tituloE{
+  font-family: "Rubik";
+  color: #9456B3;
+}
+
+#editar{
+  display: block;
+  margin-left: 65px;
 }

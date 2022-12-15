@@ -139,12 +139,13 @@ export default function Produtos() {
         })}
       </div>
 
-      <Modal show={edit} onHide={fecharModalEdit}>
-        <Modal.Header closeButton>
-          <Modal.Title>Editar produto</Modal.Title>
+      <Modal show={edit} onHide={fecharModalEdit} >
+        <Modal.Header closeButton className='ediProd'>
+          <Modal.Title >Editar produto</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <form>
+        <Modal.Body className='ediProd'>
+
+          <form id='editar'>
             <div>
               <span>Nome do Produto: </span>
               <label>
@@ -154,23 +155,23 @@ export default function Produtos() {
                   onChange={(e) => setNomeProduto(e.target.value)}
                   isValid={nomeProduto && !errors.nomeProduto}
                 />
-                <span tooltip>Agora sim?</span>
+                <span className='span1' tooltip>Agora sim?</span>
               </label>
             </div>
-            <div>
+            <div >
               <span>Descrição: </span>
-              <label>
+              <label >
                 <input
                   type="text"
                   defaultValue={descricao}
                   onChange={(e) => setDescricao(e.target.value)}
                   isValid={descricao && !errors.descricao}
                 />
-                <span tooltip>Aqui tambem?</span>
+                <span className='span1' tooltip>Aqui tambem?</span>
               </label>
             </div>
             <div>
-              <span>Preço: </span>
+              <span >Preço: </span>
               <label>
                 <input
                   type="text"
@@ -178,7 +179,7 @@ export default function Produtos() {
                   onChange={(e) => setPreco(e.target.value)}
                   isValid={preco && !errors.preco}
                 />
-                <span tooltip>Trocou foi?</span>
+                <span className='span1' tooltip>Trocou foi?</span>
               </label>
             </div>
             <div>
@@ -190,7 +191,7 @@ export default function Produtos() {
                   onChange={(e) => setCategoria(e.target.value)}
                   isValid={categoria && !errors.categoria}
                 />
-                <span tooltip>Arrasou!!!</span>
+                <span className='span1' tooltip>Arrasou!!!</span>
               </label>
             </div>
             <div>
@@ -202,7 +203,7 @@ export default function Produtos() {
                   onChange={(e) => setEmpreendedor(e.target.value)}
                   isValid={empreendedor && !errors.empreendedor}
                 />
-                <span tooltip>Arrasou!!!</span>
+                <span className='span1' tooltip>Arrasou!!!</span>
               </label>
             </div>
             <div>
@@ -214,12 +215,12 @@ export default function Produtos() {
                   onChange={(e) => setContato(e.target.value)}
                   isValid={contato && !errors.contato}
                 />
-                <span tooltip>Arrasou!!!</span>
+                <span className='span1' tooltip>Arrasou!!!</span>
               </label>
             </div>
           </form>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer >
           <Button variant="secondary" onClick={fecharModalEdit}>
             Cancelar
           </Button>
@@ -238,10 +239,10 @@ export default function Produtos() {
           <br /> Ao confirmar, o produto selecionado não vai se poder recuperar!!!.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={fecharModal}>
+          <Button className="boton1" variant="secondary" onClick={fecharModal}>
             Cancelar
           </Button>
-          <Button variant="primary" onClick={apagarProduto}>
+          <Button className="boton2" variant="primary" onClick={apagarProduto}>
             Confirmar
           </Button>
         </Modal.Footer>

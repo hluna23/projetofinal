@@ -1,10 +1,13 @@
 #comercios{
   display: flex;
+  margin-top: 55px;
+  
 }
 .TituloC{
+  margin-top: 50px;
   font-family: 'Rubik';
-  font-weight: bold;
   color: #9456B3;
+  font-size: 40px;
 }
 .loja{
   display: flex;
@@ -17,9 +20,54 @@
   display: block;
   margin-left: 20px;
   background-color: #F1A887;
-  width: 250px;
+  width: 350px;
+  height: 450px; 
   padding: 15px;
 }
 ul{
   list-style-type: none;
+}
+
+.botoes-lista{
+  font-family: "Rubik";
+  color: white;
+  background-color: #9e69b8;
+  margin-left: 35px;
+}
+
+
+
+#editar{
+  display: block;
+  margin-left: 65px;
+  
+}
+
+span{
+  display: flex;
+  font-family: "Rubik";
+}
+
+.span1{
+ display: inline-flex;
+  margin-left: 15px;
+  font-family: "Rubik";
+}
+
+.ediProd{
+font-family: "rubik";
+}
+
+input{
+  font-family: "Rubik";
+
+}
+
+.boton1{
+  background-color: #9456B3;
+  font-family: "Rubik";
+}
+
+.boton2{
+ background-color: #f8720b;
 }

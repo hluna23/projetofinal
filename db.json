@@ -47,6 +47,14 @@
       "empreendedor": "sim",
       "empreendimento": "venta de carros y motos",
       "id": 12
+    },
+    {
+      "nome": "Henry luna",
+      "telefone": "81992856733",
+      "email": "lunaretornado2@gmail.com",
+      "empreendedor": "nao",
+      "empreendimento": "hehehehe",
+      "id": 13
     }
   ],
   "produtos": [
@@ -72,14 +80,14 @@
       "empreendedor": "Maria "
     },
     {
-      "nomeProduto": "Automoveis",
-      "descricao": "venta de carros y motos",
-      "preco": "R$ 1.000",
-      "categoria": "ventas",
-      "nomeEmpreendedor": "Ana Paula",
-      "contato": "56987412365",
-      "id": 3,
-      "empreendedor": "Carolina"
+      "nomeProduto": "edulingua ",
+      "descricao": "Escola da Lingua Espanhola",
+      "preco": "R$ 100",
+      "categoria": "Cursos de espanhol, online, com professores nativos da lingua ",
+      "nomeEmpreendedor": "Alejandra Delgado",
+      "contato": "81992856733",
+      "id": 4,
+      "empreendedor": "Rua Oeste, casa 857, Arruda, Recife - Pe"
     }
   ],
   "usuarios": [
