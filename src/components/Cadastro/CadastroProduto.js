@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { isRouteErrorResponse, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button, Col, Row, Form } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
 
 export default function CadastroProduto() {
-  const [validated, setValidated] = useState(false);
   const [nomeProduto, setNomeProduto] = useState("");
   const [descricao, setDescricao] = useState("");
   const [preco, setPreco] = useState("");
   const [categoria, setCategoria] = useState("");
   const [nomeEmpreendedor, setNomeEmpreendedor] = useState("");
   const [contato, setContato] = useState("");
-  const [errors, setErrors] = useState("");
+
+  const [validated, setValidated] = useState(false);
 
   const novoCadastro = async () => {
     const cadastroPost = {
@@ -44,7 +44,12 @@ export default function CadastroProduto() {
     <div>
       <Cabecalho />
       <div>
-        <Form noValidate onSubmit={handleSubmit}>
+        <Form
+          noValidate
+          validated={validated}
+          onClick={handleSubmit}
+          onSubmit={handleSubmit}
+        >
           <Row className="mb-3">
             <Form.Group
               as={Col}
@@ -54,12 +59,11 @@ export default function CadastroProduto() {
             >
               <Form.Label>Nome do produto: </Form.Label>
               <Form.Control
-                requerid
+                required
                 type="text"
                 placeholder="produto do projeto X"
                 value={nomeProduto}
                 onChange={(e) => setNomeProduto(e.target.value)}
-                isValid={nomeProduto && !errors.nomeProduto}
               />
               <Form.Control.Feedback tooltip>Perfeito!</Form.Control.Feedback>
             </Form.Group>
@@ -72,12 +76,11 @@ export default function CadastroProduto() {
             >
               <Form.Label>Descrição: </Form.Label>
               <Form.Control
-                requerid
+                required
                 type="text"
                 placeholder="descriva seu produto brevemente"
                 value={descricao}
                 onChange={(e) => setDescricao(e.target.value)}
-                isValid={descricao && !errors.descricao}
               />
               <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
@@ -90,12 +93,11 @@ export default function CadastroProduto() {
             >
               <Form.Label>Preço: </Form.Label>
               <Form.Control
-                requerid
-                type="text"
+                required
+                type="number"
                 placeholder="R$ 100,00"
                 value={preco}
                 onChange={(e) => setPreco(e.target.value)}
-                isValid={preco && !errors.preco}
               />
               <Form.Control.Feedback tooltip>Nossa!!!</Form.Control.Feedback>
             </Form.Group>
@@ -108,12 +110,11 @@ export default function CadastroProduto() {
             >
               <Form.Label>Categoria: </Form.Label>
               <Form.Control
-                requerid
+                required
                 type="text"
                 placeholder="serviços"
                 value={categoria}
                 onChange={(e) => setCategoria(e.target.value)}
-                isValid={categoria && !errors.categoria}
               />
               <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
@@ -126,12 +127,11 @@ export default function CadastroProduto() {
             >
               <Form.Label> Empreendedor: </Form.Label>
               <Form.Control
-                requerid
+                required
                 type="text"
                 placeholder="Nome Sobrenome do empreendedor"
                 value={nomeEmpreendedor}
                 onChange={(e) => setNomeEmpreendedor(e.target.value)}
-                isValid={nomeEmpreendedor && !errors.nomeEmpreendedor}
               />
               <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
@@ -144,25 +144,24 @@ export default function CadastroProduto() {
             >
               <Form.Label>Contato:</Form.Label>
               <Form.Control
-                requerid
-                type="text"
+                required
+                type="number"
                 placeholder="(xx) xxxxx-xxxx"
                 value={contato}
                 onChange={(e) => setContato(e.target.value)}
-                isValid={contato && !errors.contato}
               />
               <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
           </Row>
-          <Link to="/cadastrar">
-            <Button
-              variant="success"
-              onClick={novoCadastro}
-              className="botao-cadastro"
-            >
-              Cadastrar Produto
-            </Button>
-          </Link>
+
+          <Button
+            type="submit"
+            variant="success"
+            onClick={novoCadastro}
+            className="botao-cadastro"
+          >
+            Cadastrar Produto
+          </Button>
         </Form>
       </div>
     </div>
