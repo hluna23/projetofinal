@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { isRouteErrorResponse, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button, Col, Row, Form } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
 
 export default function CadastroUsuario() {
-  const [validated, setValidated] = useState(false);
+
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
   const [empreendimento, setEmpreendimento] = useState("");
   const [empreendedor, setEmpreendedor] = useState("");
-  const [errors, setErrors] = useState('')
+  
+  const [validated, setValidated] = useState(false);
 
   const novoCadastro = async () => {
     const cadastroPost = {
@@ -42,7 +43,7 @@ export default function CadastroUsuario() {
     <div>
       <Cabecalho />
       <div>
-        <Form noValidate onSubmit={handleSubmit}>
+        <Form noValidate validated={validated} onClick={handleSubmit} onSubmit={handleSubmit}>
         <Row className="mb-3">
           <span>Você é empreendedor?</span>
           <div>
@@ -73,7 +74,6 @@ export default function CadastroUsuario() {
                 placeholder="Nome e Sobrenome"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
-                isValid={nome && !errors.nome}
               />
               <Form.Control.Feedback tooltip>Perfeito!</Form.Control.Feedback>
             </Form.Group>
@@ -82,11 +82,10 @@ export default function CadastroUsuario() {
               <Form.Label>Telefone: </Form.Label>
               <Form.Control
                 required
-                type="text"
+                type="number"
                 placeholder="(xx) xxxxx-xxxx"
                 value={telefone}
                 onChange={(e) => setTelefone(e.target.value)}
-                isValid={telefone && !errors.telefone}
               />
               <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
@@ -94,12 +93,11 @@ export default function CadastroUsuario() {
             <Form.Group as={Col} md="4" controlId="email" className='position-relative'>
               <Form.Label>E-mail: </Form.Label>
               <Form.Control
-                required
-                type="text"
+                type="email"
                 placeholder="email@exemplo.com"
+                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                isValid={email && !errors.email}
 
               />
               <Form.Control.Feedback tooltip>Perfeito!!</Form.Control.Feedback>
@@ -113,14 +111,11 @@ export default function CadastroUsuario() {
                 placeholder="Descreva aqui detalhadamente seu empreendimento"
                 value={empreendimento}
                 onChange={(e) => setEmpreendimento(e.target.value)}
-                isValid={empreendimento && !errors.empreendimento}
-
               />
               <Form.Control.Feedback tooltip>Muito bem!</Form.Control.Feedback>
             </Form.Group>
           </Row>
 
-          <Link to="/cadastro-produto">
             <Button
               type="submit"
               variant="success"
@@ -129,7 +124,6 @@ export default function CadastroUsuario() {
             >
               Cadastrar
             </Button>
-          </Link>
         </Form>
       </div>
     </div>
