@@ -15,40 +15,30 @@
 .titulo{
   font-size: 60px;
   color:#9456B3;
-  margin-left: 10%;
-  position: relative;
-  top: 60px;
+  top: 35px;
+  text-align: start;
+
   
 }
 .Circulo{
 position: relative;
-left: 470px;
+right: -200px;
 }
-
 
 .Circulo:hover {
   transition: 2s;
   transform: rotateY(360deg);
-  
 }
 
 .Aro{
-
-  margin-left: 9%;
+  position: relative;
+  left: -150px;
   
 }
 
-.circuloAro{
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
-
 .ciudad{
-
   width: 100%;
   position: relative;
- 
   left: 0px;
 }
 
@@ -56,35 +46,35 @@ left: 470px;
   text-decoration: none;
 }
 .Btn{
+  display: flex;
   font-family: "orbitron";
-  font-size: 25px;
   font-weight: bold;
-  width: 200px;
+  font-size: 1.8rem;
   height: 75px;
   color: #f8720b;
   background-color: #ffff;
-  text-transform: capitalize;
   border:2px solid #9678d2;
   text-align: center;
   padding: 12px;
   border-radius: 8px;
+  margin: 1rem;
+  padding: 1rem;
 }
-
-
 
 .Btn:hover{
   background-color:#9456B3;
   color: #fff;
 }
 
-#BtnNeg {
-  position: relative;
-  left: 25%;
-
-}
+#BtnNeg,
 #BtnC{
-  position: relative;
+  display: inline;
   left: 60%;
   bottom: 90px;
+}
+
+#BtnC{
+  width: 5rem;
+  margin-left: 20rem;
 }
 

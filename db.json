@@ -25,14 +25,6 @@
       "id": 5
     },
     {
-      "nome": "Ana carolina",
-      "telefone": "5486843548",
-      "email": "carolina@gmcol",
-      "empreendedor": "",
-      "empreendimento": "nosso emprendimento e sobre maquiagem deixar as garotas mais lindas do q ja sao",
-      "id": 8
-    },
-    {
       "nome": "Jesika",
       "telefone": "5469874235",
       "email": "jesika@mail.com",
@@ -53,10 +45,9 @@
       "telefone": "81992856733",
       "email": "lunaretornado2@gmail.com",
       "empreendedor": "nao",
-      "empreendimento": "hehehehe",
+      "empreendimento": "testeando a validaçao do formulario hehehehe",
       "id": 13
     }
-    
   ],
   "produtos": [
     {
@@ -90,7 +81,7 @@
       "id": 4,
       "empreendedor": "Rua Oeste, casa 857, Arruda, Recife - Pe"
     }
-],
+  ],
   "usuarios": [
     {
       "nome": "jazmin",

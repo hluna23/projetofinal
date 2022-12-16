@@ -15,10 +15,10 @@ export default function Home() {
       </div>
       <div className="Menu">
         <Link to="/cadastrar">
-            <p className="Btn" id='BtnNeg' variant="primary">Anunciantes</p>
+            <p className="Btn" id='BtnNeg' >Anunciantes</p>
           </Link>
           <Link to="/produtos">
-            <p className="Btn" id='BtnC' variant="primary">Site</p>
+            <p className="Btn" id='BtnC'>Site</p>
           </Link>
         </div>
     </main>
