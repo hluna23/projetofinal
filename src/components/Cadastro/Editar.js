@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button, Col, Row, Form } from "react-bootstrap";
+import "./Cadastrar.css";
+import "./Cadastrar.css";
 
 export default function EditarCadastro() {
   const { id } = useParams();

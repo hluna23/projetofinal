@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Col, Row, Form } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
+import "./Cadastrar.css";
 
 export default function CadastroProduto() {
   const [nomeProduto, setNomeProduto] = useState("");
@@ -46,16 +47,18 @@ export default function CadastroProduto() {
     <div>
       <Cabecalho />
       <div>
+        <h1>
+          <b>Cadastro de Produtos</b>
+        </h1>
         <Form
           noValidate
           validated={validated}
           onChange={handleSubmit}
           onSubmit={handleSubmit}
         >
-          <Row className="mb-3">
+          <Row className="mb-3" id="formulario">
             <Form.Group
               as={Col}
-              md="4"
               controlId="nomeDoProduto"
               className="position-relative"
             >
@@ -72,7 +75,6 @@ export default function CadastroProduto() {
 
             <Form.Group
               as={Col}
-              md="4"
               controlId="descricao"
               className="position-relative"
             >
@@ -89,7 +91,6 @@ export default function CadastroProduto() {
 
             <Form.Group
               as={Col}
-              md="4"
               controlId="preco"
               className="position-relative"
             >
@@ -97,7 +98,7 @@ export default function CadastroProduto() {
               <Form.Control
                 required
                 type="number"
-                placeholder="R$ 100,00"
+                placeholder="1.000"
                 value={preco}
                 onChange={(e) => setPreco(e.target.value)}
               />
@@ -106,7 +107,6 @@ export default function CadastroProduto() {
 
             <Form.Group
               as={Col}
-              md="4"
               controlId="categoria"
               className="position-relative"
             >
@@ -123,7 +123,6 @@ export default function CadastroProduto() {
 
             <Form.Group
               as={Col}
-              md="4"
               controlId="empreendedor"
               className="position-relative"
             >
@@ -140,7 +139,6 @@ export default function CadastroProduto() {
 
             <Form.Group
               as={Col}
-              md="4"
               controlId="contato"
               className="position-relative"
             >
@@ -148,21 +146,22 @@ export default function CadastroProduto() {
               <Form.Control
                 required
                 type="number"
-                placeholder="(xx) xxxxx-xxxx"
+                placeholder="xx xxxxx-xxxx"
                 value={contato}
                 onChange={(e) => setContato(e.target.value)}
               />
               <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
           </Row>
+
           <Button
+            className="botao-cadastro"
             disabled={estadoDoBotao}
             type="submit"
             variant="success"
             onClick={novoCadastro}
-            className="botao-cadastro"
           >
-            Cadastrar Produto
+            <b>Cadastrar Produto</b>
           </Button>
         </Form>
       </div>
