@@ -4,20 +4,20 @@
   color: #9456b3;
 }
 
-.circuloAro{
+.circuloAro {
   margin: 0;
-  margin-top: 1rem;
+  margin-top: .5rem;
 }
-.links{
+.links {
   display: inline-flex;
   margin-right: 0;
 }
 
 .Circulo1 {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   position: relative;
-  left: 50px;
+  left: 65px;
   margin-top: 7px;
 }
 
@@ -27,8 +27,8 @@
 }
 
 .Aro1 {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   margin-top: 7px;
 }
 
@@ -44,15 +44,16 @@
 .nav a {
   text-decoration: none;
   padding: 1rem;
-  margin: .5rem;
+  margin: 0.5rem;
   margin-top: 1rem;
   color: #f8720b;
   font-weight: bold;
   font-size: 1.6rem;
-  -webkit-text-stroke: .2px #fff;
-  letter-spacing: .5px;
+  -webkit-text-stroke: 0.2px #fff;
+  letter-spacing: 0.5px;
 }
 
 .nav a:hover {
   color: white;
+  text-decoration-line: underline;
 }
