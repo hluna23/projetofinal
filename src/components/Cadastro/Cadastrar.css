@@ -1,0 +1,26 @@
+head,
+body,
+footer {
+  display: flex;
+  margin: auto;
+  padding: auto;
+  font-family:'Times New Roman', Times, serif;
+  
+}
+
+b.botoesCadastro{
+    display: flex;
+    font-size: 1.8rem;
+    color: white;
+    background-color: #9e69b8;
+    border-color: #703f88;
+    border-style: double;
+    border-radius: 0.5rem;
+    height: 5rem;
+    width: 18rem;
+    margin: 1rem;
+    padding-top: .8rem;
+    padding-left: 2rem;
+    text-align: center;
+    
+}
