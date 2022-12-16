@@ -63,7 +63,6 @@ export default function EditarCadastro() {
               type="text"
               defaultValue={cadastro.nome}
               onChange={(e) => setNome(e.target.value)}
-              isValid={nome && !errors.nome}
             />
             <Form.Control.Feedback tooltip>Perfeito!</Form.Control.Feedback>
           </Form.Group>
@@ -80,7 +79,6 @@ export default function EditarCadastro() {
               type="text"
               defaultValue={cadastro.telefone}
               onChange={(e) => setTelefone(e.target.value)}
-              isValid={telefone && !errors.telefone}
             />
             <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
           </Form.Group>
@@ -97,7 +95,6 @@ export default function EditarCadastro() {
               type="text"
               defaultValue={cadastro.email}
               onChange={(e) => setEmail(e.target.value)}
-              isValid={email && !errors.email}
             />
             <Form.Control.Feedback tooltip>Perfeito!!</Form.Control.Feedback>
           </Form.Group>
@@ -114,7 +111,6 @@ export default function EditarCadastro() {
               type="text"
               defaultValue={cadastro.empreendimento}
               onChange={(e) => setEmpreendimento(e.target.value)}
-              isValid={empreendimento && !errors.empreendimento}
             />
             <Form.Control.Feedback tooltip>Muito bem!</Form.Control.Feedback>
           </Form.Group>

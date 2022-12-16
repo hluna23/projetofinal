@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
-import "./ValidarForm";
 import "./Cadastrar.css";
 
 export default function Criar() {
