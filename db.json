@@ -9,14 +9,6 @@
       "id": 2
     },
     {
-      "nome": "Jazmin",
-      "telefone": "89564123658",
-      "email": "jazmin@mail.com",
-      "empreendedor": "nao",
-      "empreendimento": "delivery de cachapas",
-      "id": 3
-    },
-    {
       "nome": "Juanita alvez",
       "telefone": "00254789652",
       "email": "juana@mail.com",
@@ -53,23 +45,12 @@
     {
       "nome": "Servicos de tradução",
       "descricao": "Traduções de qualquer tipo de documento",
-      "preco": "a combinar",
+      "preco": "1000",
       "categoria": "servicos",
       "empreendedor": "Maria",
       "contato": 24514566,
       "id": 1,
       "nomeProduto": "Telcel"
-    },
-    {
-      "nomeProduto": "sdsd",
-      "descricao": "sdsdsd",
-      "preco": "dsd",
-      "categoria": "",
-      "nomeEmpreendedor": "Jazmin",
-      "contato": "sdsds",
-      "id": 2,
-      "nome": "Catalina",
-      "empreendedor": "sdsd"
     },
     {
       "nomeProduto": "edulingua ",
