@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button, Col, Row, Form } from "react-bootstrap";
 import Cabecalho from "../Cabecalho/Cabecalho";
 
@@ -12,6 +11,7 @@ export default function CadastroProduto() {
   const [contato, setContato] = useState("");
 
   const [validated, setValidated] = useState(false);
+  const [estadoDoBotao, setEstadoDoBotao] = useState(true);
 
   const novoCadastro = async () => {
     const cadastroPost = {
@@ -35,9 +35,11 @@ export default function CadastroProduto() {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+      setEstadoDoBotao(true);
+    } else {
+      setValidated(true);
+      setEstadoDoBotao(false);
     }
-
-    setValidated(true);
   };
 
   return (
@@ -47,7 +49,7 @@ export default function CadastroProduto() {
         <Form
           noValidate
           validated={validated}
-          onClick={handleSubmit}
+          onChange={handleSubmit}
           onSubmit={handleSubmit}
         >
           <Row className="mb-3">
@@ -153,8 +155,8 @@ export default function CadastroProduto() {
               <Form.Control.Feedback tooltip>Ótimo!</Form.Control.Feedback>
             </Form.Group>
           </Row>
-
           <Button
+            disabled={estadoDoBotao}
             type="submit"
             variant="success"
             onClick={novoCadastro}

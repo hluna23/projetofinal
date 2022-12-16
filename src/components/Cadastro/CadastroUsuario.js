@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button, Col, Row, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Cabecalho from "../Cabecalho/Cabecalho";
 
 export default function CadastroUsuario() {
@@ -10,9 +10,11 @@ export default function CadastroUsuario() {
   const [empreendimento, setEmpreendimento] = useState("");
   const [empreendedor, setEmpreendedor] = useState("");
 
+  const [estadoDoBotao, setEstadoDoBotao]=useState(true)
+
   const [validated, setValidated] = useState(false);
 
-  const novoCadastro = async () => {
+  const cadastrarUsuario = async () => {
     const cadastroPost = {
       nome,
       telefone,
@@ -20,56 +22,36 @@ export default function CadastroUsuario() {
       empreendedor,
       empreendimento,
     };
-
+    
     await fetch("http://localhost:3004/cadastro", {
       method: "POST",
       body: JSON.stringify(cadastroPost),
       headers: { "Content-type": "application/json; charset=UTF-8" },
     });
   };
-
+  
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-    }
-
+      setEstadoDoBotao(true);
+    }else{
     setValidated(true);
+    setEstadoDoBotao(false)
+  }
   };
+
 
   return (
     <div>
       <Cabecalho />
       <div>
-        <Form
-          noValidate
-          validated={validated}
-          onClick={handleSubmit}
-          onSubmit={handleSubmit}
-        >
+        <Form noValidate 
+        validated={validated} 
+        onChange={handleSubmit} 
+        onSubmit={handleSubmit}>
           <Row className="mb-3">
-            <span>Você é empreendedor?</span>
-            <div>
-              <br />
-              <input
-                type="radio"
-                id="empreendedor"
-                name="empreendedor"
-                value="sim"
-                onChange={(e) => setEmpreendedor(e.target.value)}
-              />
-              <label htmlFor="sim">Sim</label>
-              <input
-                type="radio"
-                id="naoempreendedor"
-                name="empreendedor"
-                value="nao"
-                onChange={(e) => setEmpreendedor(e.target.value)}
-              />
-              <label htmlFor="nao">Ainda não</label>
-            </div>
-            <br />
             <Form.Group
               as={Col}
               md="4"
@@ -137,12 +119,34 @@ export default function CadastroUsuario() {
               />
               <Form.Control.Feedback tooltip>Muito bem!</Form.Control.Feedback>
             </Form.Group>
-          </Row>
 
+            <span>Você é empreendedor?</span>
+            <div>
+              <br />
+              <input
+                type="radio"
+                id="empreendedor"
+                name="empreendedor"
+                value="sim"
+                onChange={(e) => setEmpreendedor(e.target.value)}
+              />
+              <label htmlFor="sim">Sim</label>
+              <input
+                type="radio"
+                id="naoempreendedor"
+                name="empreendedor"
+                value="nao"
+                onChange={(e) => setEmpreendedor(e.target.value)}
+              />
+              <label htmlFor="nao">Ainda não</label>
+            </div>
+            <br />
+          </Row>
           <Button
+            disabled={estadoDoBotao}
             type="submit"
             variant="success"
-            onClick={novoCadastro}
+            onClick={cadastrarUsuario}
             className="botao-cadastro"
           >
             Cadastrar

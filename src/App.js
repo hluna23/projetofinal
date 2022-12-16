@@ -1,4 +1,4 @@
-import React, { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cadastrar from "./components/Cadastro/Cadastrar";
 import Home from "./components/Home/Home";
 import Editar from "./components/Cadastro/Editar";
@@ -19,7 +19,6 @@ function App() {
         <Route path="/cadastro-produto" element={<CadastroProduto />} />
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/clientes" element={<Clientes />} />
-        <Route path="/editar/:id" element={<Editar />} />
       </Routes>
     </BrowserRouter>
   );

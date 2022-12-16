@@ -12,7 +12,7 @@ export default function Cabecalho() {
       <nav className="nav">
       <img src={circulo} alt="logo" className="Circulo1"/>
           <img src={aro} alt="logo" className="Aro1"/>
-        <Link to="/produtos" activeClassName="active">
+        <Link to="/produtos" className="active">
           <p>produtos</p>
         </Link>
         <Link to="/cadastrar" className="linkC">

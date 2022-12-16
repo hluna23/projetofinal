@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Cabecalho from "../Cabecalho/Cabecalho";
 import Loja from "../img/loja.jpg";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Form, Col, Modal, Row } from "react-bootstrap";
 import "./Produtos.css";
 
 export default function Produtos() {
@@ -14,8 +14,9 @@ export default function Produtos() {
   const [empreendedor, setEmpreendedor] = useState("");
   const [contato, setContato] = useState("");
 
+  const [estadoDoBotao, setEstadoDoBotao] = useState(true);
+
   const [validated, setValidated] = useState(false);
-  const [errors, setErrors] = useState("");
 
   const [show, setShow] = useState(false);
   const fecharModal = () => setShow(false);
@@ -84,6 +85,18 @@ export default function Produtos() {
     fecharModal();
   };
 
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+      setEstadoDoBotao(true);
+    } else {
+      setValidated(true);
+      setEstadoDoBotao(false);
+    }
+  };
+
   return (
     <div>
       <div>
@@ -100,7 +113,7 @@ export default function Produtos() {
                 <ul>
                   <li> {produto.nomeProduto}</li>
                   <li> {produto.descricao}</li>
-                  <li>Preco: {produto.preco}</li>
+                  <li>Preço: R$.{produto.preco}</li>
                   <li>Categoria: {produto.categoria}</li>
                   <li>Empreendedor: {produto.empreendedor}</li>
                   <li>Contato: {produto.contato}</li>
@@ -139,92 +152,140 @@ export default function Produtos() {
         })}
       </div>
 
-      <Modal show={edit} onHide={fecharModalEdit} >
-        <Modal.Header closeButton className='ediProd'>
-          <Modal.Title >Editar produto</Modal.Title>
+      <Modal show={edit} onHide={fecharModalEdit}>
+        <Modal.Header closeButton>
+          <Modal.Title>Editar produto</Modal.Title>
         </Modal.Header>
-        <Modal.Body className='ediProd'>
 
-          <form id='editar'>
-            <div>
-              <span>Nome do Produto: </span>
-              <label>
-                <input
+        <Modal.Body>
+          <Form
+            id="editar"
+            noValidate
+            validated={validated}
+            onChange={handleSubmit}
+            onSubmit={handleSubmit}
+          >
+            <Row className="mb-3">
+              <Form.Group
+                as={Col}
+                md="4"
+                controlId="nomeProduto"
+                className="position-relative"
+              >
+                <Form.Label>Nome do Produto: </Form.Label>
+
+                <Form.Control
+                  required
                   type="text"
                   defaultValue={nomeProduto}
                   onChange={(e) => setNomeProduto(e.target.value)}
-                  isValid={nomeProduto && !errors.nomeProduto}
                 />
-                <span className='span1' tooltip>Agora sim?</span>
-              </label>
-            </div>
-            <div >
-              <span>Descrição: </span>
-              <label >
-                <input
+                <Form.Control.Feedback tooltip>
+                  Agora sim?
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group
+                as={Col}
+                md="4"
+                controlId="descricao"
+                className="position-relative"
+              >
+                <Form.Label>Descrição: </Form.Label>
+                <Form.Control
+                  required
                   type="text"
                   defaultValue={descricao}
                   onChange={(e) => setDescricao(e.target.value)}
-                  isValid={descricao && !errors.descricao}
                 />
-                <span className='span1' tooltip>Aqui tambem?</span>
-              </label>
-            </div>
-            <div>
-              <span >Preço: </span>
-              <label>
-                <input
+                <Form.Control.Feedback tooltip>
+                  Aqui tambem?
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                md="4"
+                controlId="preco"
+                className="position-relative"
+              >
+                <Form.Label>Preço: </Form.Label>
+                <Form.Control
+                  required
                   type="text"
                   defaultValue={preco}
                   onChange={(e) => setPreco(e.target.value)}
-                  isValid={preco && !errors.preco}
                 />
-                <span className='span1' tooltip>Trocou foi?</span>
-              </label>
-            </div>
-            <div>
-              <span>Categoria: </span>
-              <label>
-                <input
+                <Form.Control.Feedback tooltip>
+                  Trocou foi?
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                md="4"
+                controlId="categoria"
+                className="position-relative"
+              >
+                <Form.Label>Categoria: </Form.Label>
+                <Form.Control
+                  required
                   type="text"
                   defaultValue={categoria}
                   onChange={(e) => setCategoria(e.target.value)}
-                  isValid={categoria && !errors.categoria}
                 />
-                <span className='span1' tooltip>Arrasou!!!</span>
-              </label>
-            </div>
-            <div>
-              <span>Empreendedor: </span>
-              <label>
-                <input
+                <Form.Control.Feedback tooltip>
+                  Arrasou!!!
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                md="4"
+                controlId="empreendedor"
+                className="position-relative"
+              >
+                <Form.Label>Nome do empreendedor: </Form.Label>
+                <Form.Control
+                  required
                   type="text"
                   defaultValue={empreendedor}
                   onChange={(e) => setEmpreendedor(e.target.value)}
-                  isValid={empreendedor && !errors.empreendedor}
                 />
-                <span className='span1' tooltip>Arrasou!!!</span>
-              </label>
-            </div>
-            <div>
-              <span>Contato: </span>
-              <label>
-                <input
+                <Form.Control.Feedback tooltip>
+                  Arrasou!!!
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                md="4"
+                controlId="contato"
+                className="position-relative"
+              >
+                <Form.Label>Contato: </Form.Label>
+                <Form.Control
+                  required
                   type="text"
                   defaultValue={contato}
                   onChange={(e) => setContato(e.target.value)}
-                  isValid={contato && !errors.contato}
                 />
-                <span className='span1' tooltip>Arrasou!!!</span>
-              </label>
-            </div>
-          </form>
+                <Form.Control.Feedback tooltip>
+                  Arrasou!!!
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+          </Form>
         </Modal.Body>
-        <Modal.Footer >
+
+        <Modal.Footer>
           <Button variant="secondary" onClick={fecharModalEdit}>
             Cancelar
           </Button>
-          <Button variant="primary" onClick={alterarProduto}>
+          <Button
+            variant="primary"
+            disabled={estadoDoBotao}
+            onClick={alterarProduto}
+          >
             Confirmar
           </Button>
         </Modal.Footer>
@@ -236,7 +297,8 @@ export default function Produtos() {
         </Modal.Header>
         <Modal.Body>
           Tem certeza?
-          <br /> Ao confirmar, o produto selecionado não vai se poder recuperar!!!.
+          <br /> Ao confirmar, o produto selecionado não vai se poder
+          recuperar!!!.
         </Modal.Body>
         <Modal.Footer>
           <Button className="boton1" variant="secondary" onClick={fecharModal}>
