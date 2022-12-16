@@ -8,8 +8,10 @@ export default function Home() {
 
       <div className="fondo">
         <h1 className="titulo">Guia do Comercio</h1>
-          <img src={circulo} alt="logo" className="Circulo"/>
+          <div className="circuloAro">
+            <img src={circulo} alt="logo" className="Circulo"/>
           <img src={aro} alt="logo" className="Aro"/>
+          </div>
       </div>
       <div className="Menu">
         <Link to="/cadastrar">

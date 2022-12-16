@@ -10,17 +10,21 @@ export default function Cabecalho() {
         <h2 className="titulo1">Guia do emprendedor</h2>
       </Link>
       <nav className="nav">
-      <img src={circulo} alt="logo" className="Circulo1"/>
-          <img src={aro} alt="logo" className="Aro1"/>
-        <Link to="/produtos" className="active">
-          <p>produtos</p>
+          <div className="circuloAro">
+            <img src={circulo} alt="logo" className="Circulo1"/>
+            <img src={aro} alt="logo" className="Aro1"/>
+          </div>
+          <div className="links">
+        <Link to="/produtos">
+          <p>Produtos</p>
         </Link>
-        <Link to="/cadastrar" className="linkC">
-          <p>cadastro</p>
+        <Link to="/clientes" >
+          <p>Clientes</p> 
         </Link>
-        <Link to="/clientes" style={{ textDecoration: 'none' }} >
-          <p>clientes</p> 
+        <Link to="/cadastrar" >
+          <p>Cadastro</p>
         </Link>
+        </div>
       </nav>
     </header>
   );

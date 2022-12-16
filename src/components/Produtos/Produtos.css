@@ -1,41 +1,53 @@
-#comercios{
+head, 
+body, 
+footer{
   display: flex;
-  margin-top: 55px;
+  margin: auto;
+  padding: auto;
+  font-family: "rubik";
+
+}
+
+#comercios{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1rem;
+  padding: 1rem;
+  
   
 }
 .TituloC{
   margin-top: 50px;
-  font-family: 'Rubik';
   color: #9456B3;
   font-size: 40px;
 }
+
 .loja{
-  display: flex;
-  margin-left: 25px;
   width: 150px;
   height: 150px; 
+  margin-left: 25%;
 }
 
 #Loja{
-  display: block;
-  margin-left: 20px;
+  margin-left: 1rem;
   background-color: #F1A887;
-  width: 350px;
-  height: 450px; 
-  padding: 15px;
+  width: 300px;
+  height: 520px; 
 }
+
 ul{
   list-style-type: none;
+  margin: auto 2rem ;
+
 }
+
 
 .botoes-lista{
-  font-family: "Rubik";
   color: white;
   background-color: #9e69b8;
-  margin-left: 35px;
+  margin-left: 20%;
+  margin-top: 1rem;
 }
-
-
 
 #editar{
   display: block;
@@ -43,29 +55,13 @@ ul{
   
 }
 
-span{
-  display: flex;
-  font-family: "Rubik";
-}
-
 .span1{
  display: inline-flex;
   margin-left: 15px;
-  font-family: "Rubik";
-}
-
-.ediProd{
-font-family: "rubik";
-}
-
-input{
-  font-family: "Rubik";
-
 }
 
 .boton1{
   background-color: #9456B3;
-  font-family: "Rubik";
 }
 
 .boton2{

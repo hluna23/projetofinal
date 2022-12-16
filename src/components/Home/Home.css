@@ -1,4 +1,6 @@
-
+*{
+  margin: auto;
+}
 
 .fondo{
   background-image: url("../img/ciudad.png");
@@ -6,7 +8,6 @@
   background-size: 100%;
   background-position-y: 80%;
   height: 500px;
-
 
 }
 .titulo{
@@ -34,8 +35,14 @@ left: 470px;
 
   margin-left: 9%;
   
-
 }
+
+.circuloAro{
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
 .ciudad{
 
   width: 100%;

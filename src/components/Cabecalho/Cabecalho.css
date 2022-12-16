@@ -3,6 +3,16 @@
   font-size: 40px;
   color: #9456b3;
 }
+
+.circuloAro{
+  margin: 0;
+  margin-top: 1rem;
+}
+.links{
+  display: inline-flex;
+  margin-right: 0;
+}
+
 .Circulo1 {
   width: 50px;
   height: 50px;
@@ -29,20 +39,18 @@
 }
 .nav {
   background-color: #9456b3;
-  display: inline-block;
 }
 
 .nav a {
-  position: relative;
-  left: 50%;
-  display: inline;
-  margin-left: 50px;
   text-decoration: none;
   padding: 1rem;
+  margin: .5rem;
+  margin-top: 1rem;
   color: #f8720b;
   font-weight: bold;
-  font-family: "Rubik";
-  text-transform: capitalize;
+  font-size: 1.6rem;
+  -webkit-text-stroke: .2px #fff;
+  letter-spacing: .5px;
 }
 
 .nav a:hover {
