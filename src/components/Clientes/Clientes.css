@@ -54,7 +54,18 @@ ul {
   height: 2.3rem;
 }
 
+/*Modal*/
+
 #editar {
-  display: block;
-  margin-left: 65px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: #d49476;
+  margin: 0;
+  padding: 0.5rem;
+}
+#descricao {
+  height: 8rem;
 }
