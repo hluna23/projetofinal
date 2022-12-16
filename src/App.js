@@ -1,7 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Cadastrar from "./components/Cadastro/Cadastrar";
 import Home from "./components/Home/Home";
-import Editar from "./components/Cadastro/Editar";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Produtos from "./components/Produtos/Produtos";
