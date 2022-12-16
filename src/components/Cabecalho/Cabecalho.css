@@ -1,5 +1,5 @@
 .titulo1 {
-  font-family: "Rubik";
+  font-family:'Times New Roman', Times, serif;
   font-size: 40px;
   color: #9456b3;
 }
@@ -48,8 +48,8 @@
   margin-top: 1rem;
   color: #f8720b;
   font-weight: bold;
-  font-size: 1.6rem;
-  -webkit-text-stroke: 0.2px #fff;
+  font-size: 1.8rem;
+  -webkit-text-stroke: 0.2px  #dbc6e5dd;
   letter-spacing: 0.5px;
 }
 

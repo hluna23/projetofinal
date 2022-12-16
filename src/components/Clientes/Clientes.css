@@ -1,29 +1,60 @@
-.FormuCadastro {
-  font-family: "Rubik";
-  margin-left: 50px;
-  margin-top: 25px;
-  background-color: #F1A887;
-  width: 450px
-}
-
-.li{
- display: inline;
-  margin-left: 50px;
-  margin-top: 25px;
-  
-    ;
-}
-
-.input{
+head,
+body,
+footer {
   display: flex;
+  margin: auto;
+  padding: auto;
+  font-family:'Times New Roman', Times, serif;
+  
 }
 
-.tituloE{
-  font-family: "Rubik";
-  color: #9456B3;
+h2{
+  -webkit-text-stroke: 1px #703f88;
+  letter-spacing: 0.5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#editar{
+#FormuCadastro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin: .5rem;
+  padding: .5rem;
+}
+
+h1,
+h3 {
+  text-align: center;
+  color: #9456b3;
+  margin-top: 1rem;
+}
+
+.usuario {
+  background-color: #f1a887;
+  width: auto;
+  height: auto;
+  border-style: solid;
+  border-radius: .5rem;
+  border-color: #d49476;
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 2rem 1rem;
+}
+
+.botoes-lista {
+  color: white;
+  background-color: #9e69b8;
+  border-color: #703f88;
+  margin-left: 15%;
+  margin-top: 1rem;
+  width: 5rem;
+  height: 2.3rem;
+}
+
+#editar {
   display: block;
   margin-left: 65px;
 }

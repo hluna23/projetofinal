@@ -95,13 +95,17 @@ export default function Clientes() {
 
   return (
     <div>
+    <div>
       <Cabecalho />
-      <h1 className="tituloE">Empreendedores cadastrados</h1>
+    </div>
+      <h1 className="tituloE"> <b>Empreendedores cadastrados</b></h1>
 
+      <div id="FormuCadastro">
       {cadastro.map((contato) => {
         return (
-          <div key={contato.id} className="FormuCadastro">
-            <div  className="li">
+          <div key={contato.id} >
+            <div className="usuario">
+              <h3><b>Empreendedor</b></h3>
               <ul>
                 <li>Nome: {contato.nome}</li>
                 <li>E-mail: {contato.email}</li>
@@ -111,7 +115,7 @@ export default function Clientes() {
               </ul>
               <div>
                 <Button
-                  variant="outline-success"
+                  variant="line-success"
                   size="sm"
                   onClick={() =>
                     mostrarModalEdit(
@@ -125,15 +129,15 @@ export default function Clientes() {
                   }
                   className="botoes-lista"
                 >
-                  Editar
+                  <b>Editar</b>
                 </Button>
                 <Button
-                  variant="outline-danger"
+                  variant="line-danger"
                   size="sm"
                   onClick={() => mostrarModal(contato.id)}
                   className="botoes-lista"
                 >
-                  Apagar
+                  <b>Apagar</b>
                 </Button>
               </div>
             </div>
@@ -281,6 +285,7 @@ export default function Clientes() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+  </div>
+  </div>
   );
 }

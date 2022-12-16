@@ -102,7 +102,7 @@ export default function Produtos() {
       <div>
         <Cabecalho />
       </div>
-      <h1 className="TituloC">Comercios</h1>
+      <h1 className="TituloC"><b>Produtos dos Comercios</b> </h1>
 
       <div id="comercios">
         {produtos.map((produto) => {
@@ -110,6 +110,8 @@ export default function Produtos() {
             <div key={produto.id}>
               <div id="Loja">
                 <img src={Loja} alt="Loja" className="loja" />
+              <h3><b>Produto</b></h3>
+
                 <ul>
                   <li> {produto.nomeProduto}</li>
                   <li> {produto.descricao}</li>
@@ -134,16 +136,16 @@ export default function Produtos() {
                       )
                     }
                     className="botoes-lista"
-                  >
-                    Editar
+                  ><b>
+                    Editar</b>
                   </Button>
                   <Button
                     variant="outline-danger"
                     size="sm"
                     onClick={() => mostrarModal(produto.id)}
                     className="botoes-lista"
-                  >
-                    Apagar
+                  ><b>
+                    Apagar</b>
                   </Button>
                 </div>
               </div>

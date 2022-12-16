@@ -1,5 +1,7 @@
 *{
   margin: auto;
+  font-family:'Times New Roman', Times, serif;
+
 }
 
 .fondo{
@@ -11,8 +13,7 @@
 
 }
 .titulo{
-  font-family: "Rubik";
-  font-size: 40px;
+  font-size: 60px;
   color:#9456B3;
   margin-left: 10%;
   position: relative;
