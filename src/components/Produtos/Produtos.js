@@ -102,7 +102,9 @@ export default function Produtos() {
       <div>
         <Cabecalho />
       </div>
-      <h1 className="TituloC"><b>Produtos dos Comercios</b> </h1>
+      <h1 className="TituloC">
+        <b>Produtos dos Comercios</b>
+      </h1>
 
       <div id="comercios">
         {produtos.map((produto) => {
@@ -110,7 +112,9 @@ export default function Produtos() {
             <div key={produto.id}>
               <div id="Loja">
                 <img src={Loja} alt="Loja" className="loja" />
-              <h3><b>Produto</b></h3>
+                <h3>
+                  <b>Produto</b>
+                </h3>
 
                 <ul>
                   <li> {produto.nomeProduto}</li>
@@ -136,20 +140,20 @@ export default function Produtos() {
                       )
                     }
                     className="botoes-lista"
-                  ><b>
-                    Editar</b>
+                  >
+                    <b>Editar</b>
                   </Button>
                   <Button
                     variant="outline-danger"
                     size="sm"
                     onClick={() => mostrarModal(produto.id)}
                     className="botoes-lista"
-                  ><b>
-                    Apagar</b>
+                  >
+                    <b>Apagar</b>
                   </Button>
                 </div>
               </div>
-              <br/>
+              <br />
             </div>
           );
         })}
@@ -160,6 +164,7 @@ export default function Produtos() {
               <Modal.Title>Editar produto</Modal.Title>
             </Modal.Header>
 
+<<<<<<< HEAD
             <Modal.Body>
               <Form
                 id="editar"
@@ -167,6 +172,27 @@ export default function Produtos() {
                 validated={validated}
                 onChange={handleSubmit}
                 onSubmit={handleSubmit}
+=======
+      <Modal show={edit} onHide={fecharModalEdit}>
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <b>Editar Produto</b>
+          </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <Form
+            noValidate
+            validated={validated}
+            onChange={handleSubmit}
+            onSubmit={handleSubmit}
+          >
+            <Row className="mb-3" id="editar">
+              <Form.Group
+                as={Col}
+                controlId="nomeProduto"
+                className="position-relative"
+>>>>>>> fbabfa2250ddd4ae6fd06ef85a7ed614600ef6e5
               >
                 <Row className="mb-3">
                   <Form.Group
@@ -177,6 +203,7 @@ export default function Produtos() {
                   >
                     <Form.Label>Nome do Produto: </Form.Label>
 
+<<<<<<< HEAD
                     <Form.Control
                       required
                       type="text"
@@ -294,21 +321,150 @@ export default function Produtos() {
             </Modal.Footer>
           </Modal>
         </div>
+=======
+                <Form.Control
+                  required
+                  type="text"
+                  defaultValue={nomeProduto}
+                  onChange={(e) => setNomeProduto(e.target.value)}
+                />
+                <Form.Control.Feedback tooltip>
+                  Agora sim?
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group
+                as={Col}
+                controlId="descricao"
+                className="position-relative"
+              >
+                <Form.Label>Descrição: </Form.Label>
+                <Form.Control
+                  id="descricao"
+                  required
+                  type="text"
+                  defaultValue={descricao}
+                  onChange={(e) => setDescricao(e.target.value)}
+                />
+                <Form.Control.Feedback tooltip>
+                  Aqui tambem?
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                controlId="preco"
+                className="position-relative"
+              >
+                <Form.Label>Preço: </Form.Label>
+                <Form.Control
+                  required
+                  type="number"
+                  defaultValue={preco}
+                  onChange={(e) => setPreco(e.target.value)}
+                />
+                <Form.Control.Feedback tooltip>
+                  Trocou foi?
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                controlId="categoria"
+                className="position-relative"
+              >
+                <Form.Label>Categoria: </Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  defaultValue={categoria}
+                  onChange={(e) => setCategoria(e.target.value)}
+                />
+                <Form.Control.Feedback tooltip>
+                  Arrasou!!!
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                controlId="empreendedor"
+                className="position-relative"
+              >
+                <Form.Label>Nome do empreendedor: </Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  defaultValue={empreendedor}
+                  onChange={(e) => setEmpreendedor(e.target.value)}
+                />
+                <Form.Control.Feedback tooltip>
+                  Arrasou!!!
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group
+                as={Col}
+                controlId="contato"
+                className="position-relative"
+              >
+                <Form.Label>Contato: </Form.Label>
+                <Form.Control
+                  required
+                  type="number"
+                  defaultValue={contato}
+                  onChange={(e) => setContato(e.target.value)}
+                />
+                <Form.Control.Feedback tooltip>
+                  Arrasou!!!
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+          </Form>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button
+            className="botao-modal"
+            variant="secondary"
+            onClick={fecharModalEdit}
+          >
+            <b>Cancelar</b>
+          </Button>
+          <Button
+            variant="primary"
+            disabled={estadoDoBotao}
+            onClick={alterarProduto}
+          >
+            <b>Confirmar</b>
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+>>>>>>> fbabfa2250ddd4ae6fd06ef85a7ed614600ef6e5
       <Modal show={show} onHide={fecharModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Apagar produto</Modal.Title>
+          <Modal.Title>
+            <b>Apagar produto</b>
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Tem certeza?
-          <br /> Ao confirmar, o produto selecionado não vai se poder
+          Tem certeza???
+          <br /> Ao confirmar, o produto selecionado <b>NÃO</b> vai se poder
           recuperar!!!.
         </Modal.Body>
         <Modal.Footer>
-          <Button className="boton1" variant="secondary" onClick={fecharModal}>
-            Cancelar
+          <Button
+            className="botao-modal"
+            variant="secondary"
+            onClick={fecharModal}
+          >
+            <b>Cancelar</b>
           </Button>
-          <Button className="boton2" variant="primary" onClick={apagarProduto}>
-            Confirmar
+          <Button
+            className="botao-modal"
+            variant="primary"
+            onClick={apagarProduto}
+          >
+            <b>Confirmar</b>
           </Button>
         </Modal.Footer>
       </Modal>

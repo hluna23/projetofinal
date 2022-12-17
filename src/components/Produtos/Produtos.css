@@ -17,7 +17,7 @@
 
 .loja{
   width: 150px;
-  height: 150px; 
+  height: 120px; 
   margin-left: 25%;
 }
 
@@ -46,26 +46,36 @@ ul{
   height: 2.3rem;
 }
 
+/*Modal*/
 
 #editar{
   display: flex;
   margin-right: 45px;
  background-color: #703f88;
 }
-
+#editar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: #d49476;
+  margin: 0;
+  padding: 0.5rem;
+}
+#descricao {
+  height: 8rem;
+}
 .span1{
  display: inline-flex;
   margin-left: 15px;
 }
-
 .boton1{
   background-color: #9456B3;
 }
-
 .boton2{
  background-color: #f8720b;
 }
-
 .editarProduto{
   display: flex;
 }

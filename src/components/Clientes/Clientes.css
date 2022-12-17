@@ -54,8 +54,22 @@ ul {
   height: 2.3rem;
 }
 
-#editar {
-  display: block;
-  margin-left: 65px;
-}
+/*Modal*/
 
+#editar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: #d49476;
+  margin: 0;
+  padding: 0.5rem;
+}
+<<<<<<< HEAD
+
+=======
+#descricao {
+  height: 8rem;
+}
+>>>>>>> fbabfa2250ddd4ae6fd06ef85a7ed614600ef6e5
