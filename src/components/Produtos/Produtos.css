@@ -1,12 +1,4 @@
-head, 
-body, 
-footer{
-  display: flex;
-  margin: auto;
-  padding: auto;
-  font-family:'Rubik', Times, serif;
-  
-}
+
 
 #comercios{
   display: grid;

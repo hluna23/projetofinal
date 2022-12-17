@@ -1,19 +1,22 @@
 
+
 .fondo{
   background-image: url("../img/ciudad.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: 80%;
   height: 500px;
+  width: 1350px;
+
 }
 
 .titulo{
   font-family: "Rubik";
   font-size: 60px;
   color:#9456B3;
-  margin-left: 10%;
+  right: 350px;
   position: relative;
-  top: 60px;
+  top: 30px;
 }
 
 .Circulo{
@@ -28,15 +31,9 @@ left: 470px;
 }
 
 .Aro{
-
-  margin-left: 65%;
- 
-}
-
-.ciudad{
-  width: 100%;
   position: relative;
-  left: 0px;
+ left: 115px;
+ 
 }
 
 .Menu a{
