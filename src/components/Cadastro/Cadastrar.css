@@ -4,10 +4,10 @@ footer {
   display: flex;
   margin: auto;
   padding: auto;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Rubik", Times, serif;
 }
 
-b.botoesCadastro {
+.botoesCadastro {
   display: flex;
   font-size: 1.8rem;
   color: white;
