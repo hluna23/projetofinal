@@ -4,7 +4,6 @@
   color: #9456b3;
   margin-left: 35px;
 }
-
 .circuloAro {
   margin: 0;
   margin-top: .5rem;
@@ -13,7 +12,6 @@
   display: inline-flex;
   margin-right: 155px;
 }
-
 .Circulo1 {
   width: 65px;
   height: 65px;
@@ -21,18 +19,15 @@
   left: 65px;
   margin-top: 7px;
 }
-
 .Circulo1:hover {
   transition: 2s;
   transform: rotateY(360deg);
 }
-
 .Aro1 {
   width: 65px;
   height: 65px;
   margin-top: 7px;
 }
-
 .BtnC {
   position: relative;
   left: 50%;
@@ -41,9 +36,7 @@
 .nav {
   background-color: #9456b3;
   width: 1500px;
- 
 }
-
 .nav a {
   text-decoration: none;
   padding: 1rem;
@@ -55,7 +48,6 @@
   -webkit-text-stroke: 0.2px  #dbc6e5dd;
   letter-spacing: 0.5px;
 }
-
 .nav a:hover {
   color: white;
   text-decoration-line: underline;
