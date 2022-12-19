@@ -9,8 +9,6 @@ export default function Home() {
         <h1 className="titulo">Guia do Comercio</h1>
             <img src={circulo} alt="logo" className="Circulo"/>
             <img src={aro} alt="logo" className="Aro"/>
-        <img src={circulo} alt="logo" className="Circulo" />
-        <img src={aro} alt="logo" className="Aro" />
       </div>
       <div className="Menu">
         <Link to="/cadastrar">

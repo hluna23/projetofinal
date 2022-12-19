@@ -26,6 +26,7 @@
   border-style: solid;
   border-radius: .5rem;
   border-color: #d49476;
+margin-left: 90px;
 }
 
 ul{
@@ -46,11 +47,7 @@ ul{
 
 /*Modal*/
 
-#editar{
-  display: flex;
-  margin-right: 45px;
- background-color: #703f88;
-}
+
 #editar {
   display: grid;
   grid-template-columns: 1fr;
@@ -75,5 +72,14 @@ ul{
  background-color: #f8720b;
 }
 .editarProduto{
-  display: flex;
+  display: block;
+}
+.bloq1{
+  display: inline-flex;
+  flex-wrap: wrap;
+
+}
+.edi{
+  
+  color: aqua;
 }

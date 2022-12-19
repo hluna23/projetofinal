@@ -4,7 +4,7 @@
   background-size: 100%;
   background-position-y: 80%;
   height: 500px;
-  width: 1350px;
+  width: 1525px;
 }
 .titulo{
   font-family: "Rubik";
@@ -17,21 +17,18 @@
   top: 60px;
 }
 .Circulo{
-position: relative;
-margin-left: 4.5rem;
-margin-top: 3rem;
+display: flex;
+margin-left: 610px;
+margin-top: 50px;
 }
 .Circulo:hover {
   transition: 2s;
   transform: rotateY(360deg);
 }
-
 .Aro{
-  position: relative;
   left: 115px;
-  margin-left: 9%;
-  position: relative;
-  margin-top: -27rem;
+  margin-left: 40%;
+  margin-top: -28rem;
 }
 .ciudad{
   width: 100%;
@@ -44,7 +41,8 @@ margin-top: 3rem;
 .Menu{
   display: flex;
   flex-direction: row;
-justify-content: flex-end;}
+justify-content: flex-end;
+}
 .Btn{
   font-family: "orbitron";
   font-size: 25px;
@@ -56,8 +54,9 @@ justify-content: flex-end;}
   text-transform: capitalize;
   border:2px solid #9678d2;
   text-align: center;
-  padding: 12px;
+  padding: 15px;
   border-radius: 8px;
+  margin-right: 350px;
 }
 .Btn:hover{
   background-color:#9456B3;

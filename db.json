@@ -53,15 +53,14 @@
       "nomeProduto": "Telcel"
     },
     {
-      "nomeProduto": "edulingua ",
+      "nomeProduto": "alejandra",
       "descricao": "Escola da Lingua Espanhola",
       "preco": "100",
-      "categoria": "Cursos de espanhol, online, com professores nativos da lingua ",
+      "categoria": "C5rsos de espanhol, online, com professores nativos da lingua ",
       "nomeEmpreendedor": "Alejandra Delgado",
       "contato": "81992856733",
       "id": 4,
       "empreendedor": "Rua Oeste, casa 857, Arruda, Recife - Pe"
-<<<<<<< HEAD
     },
     {
       "nomeProduto": "dsdsds",
@@ -70,18 +69,18 @@
       "categoria": "dsd",
       "nomeEmpreendedor": "sdsdds",
       "contato": "6565",
-      "id": 5
+      "id": 5,
+      "empreendedor": "sadsa"
     },
     {
-      "nomeProduto": "",
-      "descricao": "",
-      "preco": "",
-      "categoria": "",
+      "nomeProduto": "asd",
+      "descricao": "asdasd",
+      "preco": "-1",
+      "categoria": "sad",
       "nomeEmpreendedor": "",
-      "contato": "",
-      "id": 6
-=======
->>>>>>> fbabfa2250ddd4ae6fd06ef85a7ed614600ef6e5
+      "contato": "2",
+      "id": 6,
+      "empreendedor": "asd"
     }
   ],
   "usuarios": [
