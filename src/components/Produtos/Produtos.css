@@ -1,3 +1,12 @@
+head, 
+body, 
+footer{
+  display: flex;
+  margin: auto;
+  padding: auto;
+  font-family:'Times New Roman', Times, serif;
+  
+}
 
 
 #comercios{
@@ -26,7 +35,6 @@
   border-style: solid;
   border-radius: .5rem;
   border-color: #d49476;
-margin-left: 90px;
 }
 
 ul{
@@ -61,24 +69,14 @@ ul{
 #descricao {
   height: 8rem;
 }
-.span1{
- display: inline-flex;
-  margin-left: 15px;
-}
+
 .boton1{
   background-color: #9456B3;
 }
 .boton2{
  background-color: #f8720b;
 }
-.editarProduto{
-  display: block;
-}
-.bloq1{
-  display: inline-flex;
-  flex-wrap: wrap;
 
-}
 .edi{
   
   color: aqua;
