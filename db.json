@@ -45,12 +45,12 @@
     {
       "nome": "Servicos de tradução",
       "descricao": "Traduções de qualquer tipo de documento",
-      "preco": "1000",
+      "preco": "2000",
       "categoria": "servicos",
       "empreendedor": "Maria",
       "contato": 24514566,
       "id": 1,
-      "nomeProduto": "Telcel"
+      "nomeProduto": "Claro"
     },
     {
       "nomeProduto": "edulingua ",
