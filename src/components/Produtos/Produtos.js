@@ -158,28 +158,43 @@ export default function Produtos() {
           );
         })}
       </div>
-
-      <Modal show={edit} onHide={fecharModalEdit}>
+        <div className="editarProduto">
+          <Modal show={edit} onHide={fecharModalEdit} >
+            <Modal.Header closeButton>
+              <Modal.Title >Editar produto</Modal.Title>
+            </Modal.Header>
+          </Modal>
+      <Modal show={edit} onHide={fecharModalEdit} className="bloq2">
         <Modal.Header closeButton>
           <Modal.Title>
-            <b>Editar Produto</b>
+            <b className="edi">Editar Produto</b>
           </Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
           <Form
+            className="bloq1"
             noValidate
             validated={validated}
             onChange={handleSubmit}
             onSubmit={handleSubmit}
           >
-            <Row className="mb-3" id="editar">
+              <Row className="mb-3" id="editar">
               <Form.Group
                 as={Col}
                 controlId="nomeProduto"
                 className="position-relative"
               >
-                <Form.Label>Nome do Produto: </Form.Label>
+              </Form.Group>     
+              </Row>           
+              <Row className="mb-3">
+                  <Form.Group
+                    as={Col}
+                    md="4"
+                    controlId="nomeProduto"
+                    className="position-relative"
+                  >
+                    <Form.Label>Nome do Produto: </Form.Label>
 
                 <Form.Control
                   required
@@ -190,93 +205,93 @@ export default function Produtos() {
                 <Form.Control.Feedback tooltip>
                   Agora sim?
                 </Form.Control.Feedback>
-              </Form.Group>
-              <Form.Group
-                as={Col}
-                controlId="descricao"
-                className="position-relative"
-              >
-                <Form.Label>Descrição: </Form.Label>
-                <Form.Control
-                  id="descricao"
-                  required
-                  type="text"
-                  defaultValue={descricao}
-                  onChange={(e) => setDescricao(e.target.value)}
-                />
-                <Form.Control.Feedback tooltip>
-                  Aqui tambem?
-                </Form.Control.Feedback>
-              </Form.Group>
+                  </Form.Group>
+                  <Form.Group
+                    as={Col}
+                    controlId="descricao"
+                    className="position-relative"
+                  >
+                    <Form.Label>Descrição: </Form.Label>
+                    <Form.Control
+                      id="descricao"
+                      required
+                      type="text"
+                      defaultValue={descricao}
+                      onChange={(e) => setDescricao(e.target.value)}
+                    />
+                    <Form.Control.Feedback tooltip>
+                      Aqui tambem?
+                    </Form.Control.Feedback>
+                  </Form.Group>
 
-              <Form.Group
-                as={Col}
-                controlId="preco"
-                className="position-relative"
-              >
-                <Form.Label>Preço: </Form.Label>
-                <Form.Control
-                  required
-                  type="number"
-                  defaultValue={preco}
-                  onChange={(e) => setPreco(e.target.value)}
-                />
-                <Form.Control.Feedback tooltip>
-                  Trocou foi?
-                </Form.Control.Feedback>
-              </Form.Group>
+                  <Form.Group
+                    as={Col}
+                    controlId="preco"
+                    className="position-relative"
+                  >
+                    <Form.Label>Preço: </Form.Label>
+                    <Form.Control
+                      required
+                      type="number"
+                      defaultValue={preco}
+                      onChange={(e) => setPreco(e.target.value)}
+                    />
+                    <Form.Control.Feedback tooltip>
+                      Trocou foi?
+                    </Form.Control.Feedback>
+                  </Form.Group>
 
-              <Form.Group
-                as={Col}
-                controlId="categoria"
-                className="position-relative"
-              >
-                <Form.Label>Categoria: </Form.Label>
-                <Form.Control
-                  required
-                  type="text"
-                  defaultValue={categoria}
-                  onChange={(e) => setCategoria(e.target.value)}
-                />
-                <Form.Control.Feedback tooltip>
-                  Arrasou!!!
-                </Form.Control.Feedback>
-              </Form.Group>
+                  <Form.Group
+                    as={Col}
+                    controlId="categoria"
+                    className="position-relative"
+                  >
+                    <Form.Label>Categoria: </Form.Label>
+                    <Form.Control
+                      required
+                      type="text"
+                      defaultValue={categoria}
+                      onChange={(e) => setCategoria(e.target.value)}
+                    />
+                    <Form.Control.Feedback tooltip>
+                      Arrasou!!!
+                    </Form.Control.Feedback>
+                  </Form.Group>
 
-              <Form.Group
-                as={Col}
-                controlId="empreendedor"
-                className="position-relative"
-              >
-                <Form.Label>Nome do empreendedor: </Form.Label>
-                <Form.Control
-                  required
-                  type="text"
-                  defaultValue={empreendedor}
-                  onChange={(e) => setEmpreendedor(e.target.value)}
-                />
-                <Form.Control.Feedback tooltip>
-                  Arrasou!!!
-                </Form.Control.Feedback>
-              </Form.Group>
+                  <Form.Group
+                    as={Col}
+                    controlId="empreendedor"
+                    className="position-relative"
+                  >
+                    <Form.Label>Nome do empreendedor: </Form.Label>
+                    <Form.Control
+                      required
+                      type="text"
+                      defaultValue={empreendedor}
+                      onChange={(e) => setEmpreendedor(e.target.value)}
+                    />
+                    <Form.Control.Feedback tooltip>
+                      Arrasou!!!
+                    </Form.Control.Feedback>
+                  </Form.Group>
 
-              <Form.Group
-                as={Col}
-                controlId="contato"
-                className="position-relative"
-              >
-                <Form.Label>Contato: </Form.Label>
-                <Form.Control
-                  required
-                  type="number"
-                  defaultValue={contato}
-                  onChange={(e) => setContato(e.target.value)}
-                />
-                <Form.Control.Feedback tooltip>
-                  Arrasou!!!
-                </Form.Control.Feedback>
-              </Form.Group>
-            </Row>
+                  <Form.Group
+                    as={Col}
+                    controlId="contato"
+                    className="position-relative"
+                  >
+                    <Form.Label>Contato: </Form.Label>
+                    <Form.Control
+                      required
+                      type="number"
+                      defaultValue={contato}
+                      onChange={(e) => setContato(e.target.value)}
+                    />
+                    <Form.Control.Feedback tooltip>
+                      Arrasou!!!
+                    </Form.Control.Feedback>
+                  </Form.Group>
+              </Row>
           </Form>
         </Modal.Body>
 
@@ -296,8 +311,7 @@ export default function Produtos() {
             <b>Confirmar</b>
           </Button>
         </Modal.Footer>
-      </Modal>
-
+        
       <Modal show={show} onHide={fecharModal}>
         <Modal.Header closeButton>
           <Modal.Title>
@@ -326,6 +340,8 @@ export default function Produtos() {
           </Button>
         </Modal.Footer>
       </Modal>
+      </Modal>
+    </div>
     </div>
   );
 }
